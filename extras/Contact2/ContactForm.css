@@ -1,0 +1,72 @@
+ .contact-form-container {
+  background: url('/src/Assets/bg/Black-panther.png') center/cover no-repeat;
+  
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  padding: 0;
+}
+
+.contact-form-container h2 {
+  padding-top: 35%;
+  margin-bottom: 20px;
+  color: #1ef3a8;
+  text-align: center;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  caret-color: red;
+}
+
+.input-container label {
+  font: 600 18px/1.5 Arial, sans-serif;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.input-container input,
+.input-container textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #000000;
+  z-index: 1;
+}
+
+.input-container input[type="file"] {
+  padding: 0;
+}
+
+.input-container input:focus,
+.input-container textarea:focus {
+  outline: none;
+  border-color: black;
+}
+
+.button-container {
+  text-align: center;
+  
+}
+
+.button-container button {
+  padding: 10px 20px;
+  background: #fff;
+  color: #4b24e9;
+  border: none;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+} 
+
+
+
