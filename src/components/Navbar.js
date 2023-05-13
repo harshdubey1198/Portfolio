@@ -7,19 +7,21 @@ import Container from "react-bootstrap/Container";
 import logo from "../Assets/logo1198.png";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
-import { CgGitFork } from "react-icons/cg";
+// import { CgGitFork } from "react-icons/cg";
+// import {GoLogoGithub} from "react-icons/go"
+import {IoLogoGithub} from "react-icons/io"
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 //import { faBook } from '@fortawesome/free-solid-svg-icons'
 
-
+import {FcContacts,FcManager,FcHome} from "react-icons/fc"
 import {
   AiFillStar,
-  AiOutlineHome,
-  AiOutlineUser,
+  
+  // AiOutlineUser,
   AiOutlineBook,
   
   //AiOutlineMenu,
-  AiOutlineContacts,
+  // AiOutlineContacts,
  // AiOutlinePhone
 } from "react-icons/ai";
 // import { GiSkills } from "react-icons/gi"
@@ -66,7 +68,7 @@ function NavBar() {
           
             <Nav.Item>
               <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                <AiOutlineHome style={{fontSize: "1em", marginBottom: "2px" }} /> Home
+                <FcHome style={{fontSize: "1em", marginBottom: "2px" }} /> Home
               </Nav.Link>
             </Nav.Item>
 
@@ -76,7 +78,7 @@ function NavBar() {
                 to="/about"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineUser style={{fontSize: "1em", marginBottom: "2px" }} /> About
+                <FcManager style={{fontSize: "1em", marginBottom: "2px" }} /> About
               </Nav.Link>
             </Nav.Item>
 
@@ -112,7 +114,7 @@ function NavBar() {
                 to="/contact"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineContacts style={{fontSize: "1em", marginBottom: "2px" }} />Contact
+                <FcContacts style={{fontSize: "1em", marginBottom: "2px" }} />Contact
 
               </Nav.Link>
             </Nav.Item>
@@ -123,7 +125,7 @@ function NavBar() {
                 target="_blank"
                 className="fork-btn-inner"
               >
-                <CgGitFork style={{ fontSize: "1em" }} />{" "}
+                <IoLogoGithub style={{ fontSize: "1em" }} />{" "}
                 <AiFillStar style={{ fontSize: "1em" }} />
               </Button>
             </Nav.Item>

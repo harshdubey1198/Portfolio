@@ -569,7 +569,7 @@ body {
   position: relative !important;
   padding-top: 150px !important;
   padding-bottom: 30px !important;
-  background-image: var(--section-background-color) ,url(./Assets/bg/Black-panther.png) !important;
+  background-image: var(--section-background-color) ,url(./Assets/Bg-screen/Rangoli.jpg) !important;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -698,6 +698,7 @@ body {
   color: whitesmoke;
   text-align: left;
  }
+ 
 /* 
 body {
   background-image:url('./Assets/bg/level4.png');
@@ -818,3 +819,5 @@ body {
   content: "\f071";
   padding-right: 10px;
 }
+
+

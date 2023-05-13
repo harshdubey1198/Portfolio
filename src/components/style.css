@@ -618,7 +618,7 @@ button:focus {
 .about-section{
   position: relative;
   z-index: -1;
-  background-image: var(--image-gradient), url(../Assets/bg/Black-panther.png);
+  background-image: var(--image-gradient), url(../Assets/Bg-screen/Rangoli.jpg);
   background-position: top center;
   background-repeat:repeat;
 }

@@ -1,7 +1,12 @@
+
+
+// without card
 import React, { useState } from 'react';
 import Particle from "../Particle3";
-import homeLogo from "../../Assets/home-main.svg";
+// import homeLogo from "../../Assets/home-main.svg";
 import { Container } from 'react-bootstrap';
+import {AiOutlineBook,} from "react-icons/ai";
+// import './Education.css';
 
 const Education = () => {
   const [educations] = useState([
@@ -29,19 +34,20 @@ const Education = () => {
   ]);
   
   return (
-    <Container fluid className="education-section">
-      <img
-        src={homeLogo}
-        alt="home pic"
-        className="img-fluid"
-        style={{ maxHeight: "450px" }}
-      />
+    // <Container fluid className="education-section">
+    //   <img
+    //     src={homeLogo}
+    //     alt="home pic"
+    //     className="img-fluid"
+    //     style={{ maxHeight: "450px" }}
+    //   />
    
       <Container classname="education-about-section">
         <Particle />
-        <div>
-          <h1 style={{ fontSize: "2.1em", paddingBottom: "10px" }}> </h1>
-          <h1 style={{color: "white", fontSize: "5.4em", paddingBottom: "20px" }} >EDUCATION</h1>
+        <div  >
+          <h1 style={{ fontSize: "2.1em", paddingBottom: "200px" }}> </h1>
+          <h1 style={{ color: "#ccccff", fontSize: "10.6vw", textAlign: "center", width: "100%", paddingBottom: "20px" }}><b><AiOutlineBook style={{fontSize: "1em", marginBottom: "2px" }} />EDUCATION</b></h1>
+
           {educations.map((education, index) => (
             <div key={index} style={index === educations.length - 1 ? { paddingBottom: "100px" } : null}>
               <h1 style={{color:"violet", fontSize:"1em", paddingBottom:"20px"}}>{education.institution}</h1>
@@ -52,13 +58,13 @@ const Education = () => {
                 <h10> <font color="white"> Years Attended:</font> <font color="iceblue">{education.startYear} - {education.endYear}</font></h10>
               </p>
               <p>
-                <b><h15> <font color="orange">Percentage/C.G.P.A Score : </font></h15></b><h15><font color="yellow">{education.scoredMarks}</font></h15>
+                <b><h15 style={{paddingBottom:"150px"}}> <font color="orange">Percentage/C.G.P.A Score : </font></h15></b><h15><font color="yellow">{education.scoredMarks}</font></h15>
               </p>
             </div>
           ))}
         </div>
       </Container>
-    </Container>
+    // </Container>
   );
 };
 
