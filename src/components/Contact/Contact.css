@@ -135,71 +135,44 @@ textarea{
   .form-message .done {
     color: rgb(4, 193, 4);
   }
-  .button {
-    position: relative;
-    display: inline-block;
-    padding: 12px 32px;
-    max-width: 250px;
-    font-size: 1rem;
-    font-weight: 500;
+ 
+.button {
+    padding: 20px 60px;
+    font-size:larger;
     text-transform: uppercase;
-    color: #fff;
-    background-color: #0e1538;
+    margin: 20px;
+    font-weight: bold;
+    cursor:pointer;
     border: none;
-    border-radius: 30px;
-    box-shadow: 0 0 20px #00ccff;
-    transition: all 0.3s ease-in-out;
-    overflow: hidden;
+    transition:all 0.5s ease-in-out;
+
   }
-  
-  .button::before {
-    content: '';
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    right: -20px;
-    bottom: -20px;
-    background-color: #00ccff;
-    border-radius: 50%;
-    opacity: 0.3;
-    animation: glow 1.5s ease-in-out infinite;
-  }
-  
-  @keyframes glow {
-    0% {
-      transform: scale(1);
-      opacity: 0.3;
-    }
-    50% {
-      transform: scale(1.2);
-      opacity: 0.5;
-    }
-    100% {
-      transform: scale(1);
-      opacity: 0.3;
-    }
-  }
-  
-  .button:hover {
-    background-color: #00ccff;
-    box-shadow: 0 0 20px #fff;
-  }
-  
-  .button:active {
-    background-color: #0e1538;
-    box-shadow: none;
-   
-  }
-  
-  .button:disabled {
-    background-color: #0e1538;
-    cursor: not-allowed;
-  }
-  
-  .button:disabled::before {
-    display: none;
-  }
-  
+
+.btn:hover{
+
+  /* glow */
+/* background-color: aqua;                    
+box-shadow: 0 0 5px yellow,
+            0 0 25px yellow, 
+            0 0 100px yellow        ; */
+
+
+/* shadowing */
+            box-shadow: 5px 5px 5px rgb(122, 18, 241);
+
+
+/* transition */
+/* box-shadow: inset 120px 0 0 0 rgb(222, 29, 184),
+          inset  -120px 0 0 0 rgb(26, 25, 26); */
+
+
+
+}
+
+
+
+
+
 body {
   background-image: var(--image-gradient),url('/src/Assets/Bg-screen/Rangoli.jpg');
   background-color: #0e0e0e; 

@@ -13,19 +13,19 @@ import {IoLogoGithub} from "react-icons/io"
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 //import { faBook } from '@fortawesome/free-solid-svg-icons'
 
-import {FcContacts,FcManager,FcHome} from "react-icons/fc"
+import {FcContacts,FcManager,FcHome,FcDocument, FcReading,FcViewDetails} from "react-icons/fc"
 import {
   AiFillStar,
   
   // AiOutlineUser,
-  AiOutlineBook,
+  // AiOutlineBook,
   
   //AiOutlineMenu,
   // AiOutlineContacts,
  // AiOutlinePhone
 } from "react-icons/ai";
 // import { GiSkills } from "react-icons/gi"
-import { CgFileDocument } from "react-icons/cg";
+// import { CgFileDocument } from "react-icons/cg";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -88,10 +88,24 @@ function NavBar() {
                 to="/education"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineBook style={{fontSize: "1em", marginBottom: "2px" }} />Education
+                <FcReading style={{fontSize: "1em", marginBottom: "2px" }} />Education
 
               </Nav.Link>
             </Nav.Item>
+
+
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/project"
+                onClick={() => updateExpanded(false)}
+              >
+                <FcViewDetails style={{fontSize: "1em", marginBottom: "2px" }} />Projects
+
+              </Nav.Link>
+            </Nav.Item>
+
 
             <Nav.Item>
               <Nav.Link
@@ -99,7 +113,7 @@ function NavBar() {
                 to="/resume"
                 onClick={() => updateExpanded(false)}
               >
-                <CgFileDocument style={{fontSize: "1em", marginBottom: "2px" }} />Resume 
+                <FcDocument style={{fontSize: "1em", marginBottom: "2px" }} />Resume 
 
               </Nav.Link>
             </Nav.Item>

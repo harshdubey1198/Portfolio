@@ -49,9 +49,9 @@ const Contact = () => {
     };
 
     return(
-        <Container style={{paddingTop: '200px'}} ><Particle />
+        <Container style={{paddingTop: '200px',paddingBottom:'100px'}} ><Particle />
             <Row>
-                <Col md={6} className="c-left">
+                <Col md={6} className="c-left" style={{paddingBottom:'10px'}}>
                     <h1>Get in Touch</h1>
                     <h1 className="yellow">Contact me</h1>
                 </Col>
@@ -62,8 +62,11 @@ const Contact = () => {
                         <textarea name="message" className="user" placeholder="Message" onChange={handleChange} value={formData.message || ""}/>
                         <input type="file" name="resume" className="user" onChange={handleChange}/>
                         <span className='not-done'>{notDone && "Please, fill all the input field"}</span>
-                        <Button  type="submit" className="button" disabled={done} style={{ maxWidth: "250px" }}>Send</Button>
-                        <span className='done'>{done && "Thanks for contacting me. "}</span>
+
+
+
+                        <Button  type="submit" className="btn" disabled={done} style={{ maxWidth: "250px"  }}>Send</Button>
+                        <span className='done' >{done && "Thanks for contacting me. "}</span>
                     </form>
                 </Col>
             </Row>
