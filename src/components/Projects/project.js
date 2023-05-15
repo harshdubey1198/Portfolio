@@ -5,6 +5,7 @@ import Particle from "../Particle";
 import image1 from "./project1.jpg";
 import image2 from "./project2.jpg";
 import image3 from "./project3.jpg";
+import image4 from "./Project4.jpg";
 
 function Projects() {
   return (
@@ -47,6 +48,17 @@ function Projects() {
               ghLink="https://github.com/harshdubey1198/my-Chatting-application-"
             />
           </Col>
+
+          <Col md={4} className="project-card">
+              <ProjectCard
+                imgPath={image4}
+                isBlog={false}
+                title="Netflix-Clone"
+                description="Netflix Clone is a web application that mimics the popular streaming platform Netflix. It allows users to browse and watch movies and TV shows, providing a similar user experience and features."
+                ghLink="https://github.com/harshdubey1198/Netflix-clon"
+                demoLink="https://netflix-clone-hd.vercel.app/"
+              />
+</Col>
         </Row>
       </Container>
     </Container>
