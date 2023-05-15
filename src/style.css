@@ -579,7 +579,7 @@ body {
 .about-section{
   position: relative;
   z-index: -1;
-  background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
+  background-image:url(./Assets/home-bg.jpg);
   background-position: top center;
   background-repeat:repeat;
 }
