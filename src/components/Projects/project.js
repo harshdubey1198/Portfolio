@@ -6,6 +6,7 @@ import image1 from "./project1.jpg";
 import image2 from "./project2.jpg";
 import image3 from "./project3.jpg";
 import image4 from "./Project4.jpg";
+import image5 from "./project5.png";
 
 function Projects() {
   return (
@@ -44,7 +45,7 @@ function Projects() {
               imgPath={image3}
               isBlog={false}
               title="Instant Chat Messenger"
-              description="This app is designed using Android-Java concepts. Instant messaging enables users to exchange short messages in real-time over the internet. This is authenticated and similar to WhatsApp. The application focuses on encrypted one-to-one communication for enhanced security and privacy."
+              description="This app is designed using Android-Java concepts. Instant messaging enables users to exchange short messages in real-time over the internet. This is authenticated and similar to WhatsApp."
               ghLink="https://github.com/harshdubey1198/my-Chatting-application-"
             />
           </Col>
@@ -59,6 +60,16 @@ function Projects() {
                 demoLink="https://netflix-clone-hd.vercel.app/"
               />
 </Col>
+ <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={image5}
+              isBlog={false}
+              title="Upi-Express"
+              description="This is web payment portal where user is free to transfer currency from their respective bank to receivers bank."
+              ghLink="https://github.com/harshdubey1198/upiexpress"
+              demoLink="https://upi-express.netlify.app/"
+            />
+          </Col> 
         </Row>
       </Container>
     </Container>
