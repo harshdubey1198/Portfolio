@@ -21,7 +21,7 @@ function Education() {
       institution:'British Fort Foundation',
       degree: 'Senior Secondary Education',
       year: '2018 - 2019',
-      status:'PCM',
+      status:'12TH (PCM)',
       marks: 'Percent : 61.59 %',
     },
     {
@@ -29,6 +29,7 @@ function Education() {
       institution:'British Fort Foundation',
       degree: 'Higher Secondary Education',
       year: '2016 - 2017',
+      status:'10TH',
       marks: 'C.G.P.A : 8.8',
     },
   ];
@@ -37,17 +38,17 @@ function Education() {
     <div className="education-section">
       <Particle />
       <Container>
-        <h1 className="education-heading" style={{marginTop:"170px" , color:"white"}}>
-          <AiOutlineBook /> My <span className="purple">Education</span>
+        <h1 className="education-heading" style={{marginTop:"140px" , color:"white",fontWeight:"bolder", fontFamily:"sans-serif"}}>
+          <AiOutlineBook /> My <span className="purple" >Education</span>
         </h1>
         <div className="education-card-container" style={{marginBottom:"100px" }}>
           {educationData.map((data, index) => (
-            <div className="education-card" key={index}>
-              <div className="education-logo" >
+            <div className="education-card"  key={index}>
+              <div className="education-logo" style={{paddingTop:"20px"}}  >
                 <img src={data.logo} alt="Education Logo" />
               </div>
               <div className="education-details" style={{marginTop:"10px"}}>
-                <h3 style={{color:"floralwhite"}}>{data.institution}</h3>
+                <h3 style={{color:"floralwhite",fontWeight:"bolder"}}>{data.institution}</h3>
                 <h3 style={{color:"yellowgreen" , fontStyle:"italic"}}>{data.degree}</h3>
                 <p style={{color:"tomato"}}>{data.year}</p>
                 <p style={{color:"turquoise"}}>{data.status}</p>

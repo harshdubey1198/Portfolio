@@ -3,7 +3,7 @@
   flex-direction: row;
   justify-content: flex-start;
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 10px;
 }
 
 @media (max-width: 968px) {
@@ -13,21 +13,24 @@
 }
 
 .education-card {
-  border: 5px solid;
-  border-radius: 10px;
+  border: 1px solid;
+  border-radius: 30px;
   position: relative;
-  animation: glowing-border 1s ease-in-out infinite;
+  animation: glowing-border 2s ease-in-out infinite;
 }
 
 @keyframes glowing-border {
   0% {
-    box-shadow: 0 0 5px red;
+    box-shadow: 0 0 50px rgb(255, 132, 0);
   }
-  50% {
-    box-shadow: 0 0 20px red;
+  20%{
+    box-shadow: 0 0 50px  rgb(255, 132, 0);
+  }
+  60% {
+    box-shadow: 0 0 50px rgb(249, 247, 247);
   }
   100% {
-    box-shadow: 0 0 5px red;
+    box-shadow: 0 0 50px rgb(79, 216, 24);
   }
 }
 
