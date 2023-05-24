@@ -67,7 +67,7 @@ function Home2() {
             <p>
               Feel free to <span className="purple">connect </span>with me
             </p>
-            <ul className="home-about-social-links">
+            <ul className="home-about-social-links" style={{marginBottom:"100px"}}>
               <li className="social-icons">
                 <a
                   href="https://github.com/Harshdubey1198"

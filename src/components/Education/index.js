@@ -1,71 +1,64 @@
-
-
-// without card
-import React, { useState } from 'react';
-import Particle from "../Particle3";
-// import homeLogo from "../../Assets/home-main.svg";
+import React from 'react';
 import { Container } from 'react-bootstrap';
-import {AiOutlineBook,} from "react-icons/ai";
-// import './Education.css';
+import { AiOutlineBook } from 'react-icons/ai';
+import './Education.css';
+import Particle from '../Particle';
+import image1 from "./global.png";
+import image2 from "./bff.jpg";
 
-const Education = () => {
-  const [educations] = useState([
+function Education() {
+  const educationData = [
     {
-      institution: 'BADERIA GLOBAL INSTITUTE OF ENGINEERING AND MANAGEMENT',
-      degree: 'Bachelor of Technology in Information Technology',
-      startYear: '2019',
-      endYear: '2023',
-      scoredMarks:' 8.21 S.G.P.A'
+      logo: image1,
+      institution:'Baderia Global Institute Of Engineering And Management',
+      degree: 'Bachelor of Technology',
+      year: '2019 - 2023',
+      status:'Ongoing',
+      marks: 'C.G.P.A : 8.52',
     },
     {
-      institution: 'BRITISH FORT FOUNDATION',
-      degree: 'HIGHER SECONDARY EDUCATION',
-      startYear: '2018',
-      endYear: '2019',
-      scoredMarks:' 61.59 %'
+      logo:image2,
+      institution:'British Fort Foundation',
+      degree: 'Senior Secondary Education',
+      year: '2018 - 2019',
+      status:'PCM',
+      marks: 'Percent : 61.59 %',
     },
     {
-      institution: 'BRITISH FORT FOUNDATION',
-      degree: 'SENIOR SECONDARY EDUCATION',
-      startYear: '2016',
-      endYear: '2017',
-      scoredMarks:' 8.8 C.G.P.A'
-    }
-  ]);
-  
+      logo: image2,
+      institution:'British Fort Foundation',
+      degree: 'Higher Secondary Education',
+      year: '2016 - 2017',
+      marks: 'C.G.P.A : 8.8',
+    },
+  ];
+
   return (
-    // <Container fluid className="education-section">
-    //   <img
-    //     src={homeLogo}
-    //     alt="home pic"
-    //     className="img-fluid"
-    //     style={{ maxHeight: "450px" }}
-    //   />
-   
-      <Container classname="education-about-section">
-        <Particle />
-        <div  >
-          <h1 style={{ fontSize: "2.1em", paddingBottom: "200px" }}> </h1>
-          <h1 style={{ color: "#ccccff", fontSize: "10.6vw", textAlign: "center", width: "100%", paddingBottom: "20px" }}><b><AiOutlineBook style={{fontSize: "1em", marginBottom: "2px" }} />EDUCATION</b></h1>
-
-          {educations.map((education, index) => (
-            <div key={index} style={index === educations.length - 1 ? { paddingBottom: "100px" } : null}>
-              <h1 style={{color:"violet", fontSize:"1em", paddingBottom:"20px"}}>{education.institution}</h1>
-              <p>
-                <h7> <font color="lightgreen"> Degree : </font><font color="white">{education.degree}</font></h7>
-              </p>
-              <p>
-                <h10> <font color="white"> Years Attended:</font> <font color="iceblue">{education.startYear} - {education.endYear}</font></h10>
-              </p>
-              <p>
-                <b><h15 style={{paddingBottom:"150px"}}> <font color="orange">Percentage/C.G.P.A Score : </font></h15></b><h15><font color="yellow">{education.scoredMarks}</font></h15>
-              </p>
+    <div className="education-section">
+      <Particle />
+      <Container>
+        <h1 className="education-heading" style={{marginTop:"170px" , color:"white"}}>
+          <AiOutlineBook /> My <span className="purple">Education</span>
+        </h1>
+        <div className="education-card-container" style={{marginBottom:"100px" }}>
+          {educationData.map((data, index) => (
+            <div className="education-card" key={index}>
+              <div className="education-logo" >
+                <img src={data.logo} alt="Education Logo" />
+              </div>
+              <div className="education-details" style={{marginTop:"10px"}}>
+                <h3 style={{color:"floralwhite"}}>{data.institution}</h3>
+                <h3 style={{color:"yellowgreen" , fontStyle:"italic"}}>{data.degree}</h3>
+                <p style={{color:"tomato"}}>{data.year}</p>
+                <p style={{color:"turquoise"}}>{data.status}</p>
+                <p style={{color:"HighlightText"}}>{data.marks}</p>
+              </div>
             </div>
           ))}
         </div>
       </Container>
-    // </Container>
+    </div>
   );
-};
+}
 
 export default Education;

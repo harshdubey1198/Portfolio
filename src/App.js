@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Footer from "./components/Footer";
-import Education from "./components/Education";
+import Education from "./components/Education/index";
 import Contact from "./components/Contact/Contact";
 import Resume from "./components/Resume/Resume";
 import Project from "./components/Projects/project";
