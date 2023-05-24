@@ -51,7 +51,7 @@ function Education() {
                 <h3 style={{color:"yellowgreen" , fontStyle:"italic"}}>{data.degree}</h3>
                 <p style={{color:"tomato"}}>{data.year}</p>
                 <p style={{color:"turquoise"}}>{data.status}</p>
-                <p style={{color:"HighlightText"}}>{data.marks}</p>
+                <p style={{color:"lightpink"}}>{data.marks}</p>
               </div>
             </div>
           ))}
