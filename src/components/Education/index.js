@@ -14,7 +14,7 @@ function Education() {
       degree: 'Bachelor of Technology',
       year: '2019 - 2023',
       status:'Ongoing',
-      marks: 'C.G.P.A : 8.52',
+      marks: 'C.G.P.A : 8.53',
     },
     {
       logo:image2,
@@ -22,7 +22,7 @@ function Education() {
       degree: 'Senior Secondary Education',
       year: '2018 - 2019',
       status:'12TH (PCM)',
-      marks: 'Percent : 61.59 %',
+      marks: 'Percentage : 61.59 %',
     },
     {
       logo: image2,
