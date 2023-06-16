@@ -14,7 +14,7 @@ function Education() {
       degree: 'Bachelor of Technology',
       year: '2019 - 2023',
       status:'Information Technology',
-      marks: 'Percentage : 85.30',
+      marks: 'Percentage : 85.30 %',
     },
     {
       logo:image2,
