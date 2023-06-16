@@ -21,16 +21,16 @@
 
 @keyframes glowing-border {
   0% {
-    box-shadow: 0 0 50px rgb(255, 132, 0);
+    box-shadow: 0 0 70px rgb(255, 132, 0);
   }
   20%{
-    box-shadow: 0 0 50px  rgb(255, 132, 0);
+    box-shadow: 0 0 70px  rgb(255, 132, 0);
   }
   60% {
-    box-shadow: 0 0 50px rgb(249, 247, 247);
+    box-shadow: 0 0 70px rgb(249, 247, 247);
   }
   100% {
-    box-shadow: 0 0 50px rgb(79, 216, 24);
+    box-shadow: 0 0 70px rgb(79, 216, 24);
   }
 }
 

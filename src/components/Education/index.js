@@ -13,8 +13,8 @@ function Education() {
       institution:'Baderia Global Institute Of Engineering And Management',
       degree: 'Bachelor of Technology',
       year: '2019 - 2023',
-      status:'Ongoing',
-      marks: 'C.G.P.A : 8.53',
+      status:'Information Technology',
+      marks: 'Percentage : 85.30',
     },
     {
       logo:image2,
@@ -52,7 +52,7 @@ function Education() {
                 <h3 style={{color:"yellowgreen" , fontStyle:"italic"}}>{data.degree}</h3>
                 <p style={{color:"tomato"}}>{data.year}</p>
                 <p style={{color:"turquoise"}}>{data.status}</p>
-                <p style={{color:"lightpink"}}>{data.marks}</p>
+                <p style={{color:"pink"}}>{data.marks}</p>
               </div>
             </div>
           ))}
