@@ -1,11 +1,10 @@
 .suggestion-form {
-  max-width: 400px;
+  max-width: 800px;
   margin: 0 auto;
-  border:2px solid white;
-  border-radius: 20px;
+border-radius: 10px;
   animation: glowing-border 2s ease-in-out infinite;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   margin-top: 150px; /* Adjust this value as needed */
@@ -15,10 +14,12 @@
   text-align: center;
   color: white;
   font-style: italic;
-  margin-top: 20px;
+  margin-top: 20px; 
+  /* margin-right: 100px; */
 }
 
 .suggestion-form .form-group {
+  padding-top: 10px;
   margin-bottom: 1rem;
   color: white;
   font-weight: bolder;
@@ -65,5 +66,19 @@
   }
   100% {
     box-shadow: 0 0 70px rgb(79, 216, 24);
+  }
+}
+@media (max-width: 767px) {
+  .suggestion-form {
+    flex-direction: column;
+    align-items: center;
+    max-width: 350px;
+    max-height: 800px;
+    /* Set a minimum height for the form container */
+  }
+}
+@media (min-width: 768px) {
+  .suggestion-form h2 {
+    margin-right: 150px;
   }
 }
