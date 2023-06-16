@@ -13,7 +13,7 @@ import {IoLogoGithub} from "react-icons/io"
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 //import { faBook } from '@fortawesome/free-solid-svg-icons'
 
-import {FcContacts,FcManager,FcHome,FcDocument, FcReading,FcViewDetails} from "react-icons/fc"
+import {FcContacts,FcManager,FcHome,FcDocument, FcReading,FcViewDetails,FcSurvey} from "react-icons/fc"
 import {
   AiFillStar,
   
@@ -129,6 +129,18 @@ function NavBar() {
                 onClick={() => updateExpanded(false)}
               >
                 <FcContacts style={{fontSize: "1em", marginBottom: "2px" }} />Contact
+
+              </Nav.Link>
+            </Nav.Item>
+
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/suggestion"
+                onClick={() => updateExpanded(false)}
+              >
+                <FcSurvey style={{fontSize: "1em", marginBottom: "2px" }} />Suggestions
 
               </Nav.Link>
             </Nav.Item>

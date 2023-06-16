@@ -33,6 +33,7 @@ const Contact = () => {
                 const formDataToSend = new FormData();
                 formDataToSend.append("name", formData.name);
                 formDataToSend.append("email", formData.email);
+                formDataToSend.append("mobile", formData.mobile);
                 formDataToSend.append("message", formData.message);
                 formDataToSend.append("resume", formData.resume);
                 await axios.post("https://getform.io/f/9cdbd3e7-8c0c-4941-84c4-42dbf1d63990", formDataToSend, {
@@ -59,6 +60,7 @@ const Contact = () => {
                     <form ref={form} onSubmit={sendEmail}>
                         <input type="text" name="name" className="user"  placeholder="Name" onChange={handleChange} value={formData.name || ""}/>
                         <input type="email" name="email" className="user" placeholder="Email" onChange={handleChange} value={formData.email || ""}/>
+                        <input type="tel" name="mobile" className="user" placeholder='Mobile' onChange={handleChange} value={formData.mobile || ""}/> 
                         <textarea name="message" className="user" placeholder="Message" onChange={handleChange} value={formData.message || ""}/>
                         <input type="file" name="resume" className="user" onChange={handleChange}/>
                         <span className='not-done'>{notDone && "Please, fill all the input field"}</span>
