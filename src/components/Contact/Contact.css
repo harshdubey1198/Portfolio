@@ -1,5 +1,5 @@
 .contact-form{
-    padding: 0 3rem 0 3rem;
+
     display: flex;
     height: 80vh;
     margin-top: 4rem;
@@ -23,7 +23,7 @@
 {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     align-items: center;
     
 }
@@ -44,7 +44,7 @@
 }
 
 input{
-  padding-top: 100px;
+  padding-top: 10px;
     background-color: var(--purple)
 }
 textarea{
@@ -54,7 +54,8 @@ textarea{
 
 .done{
     font-size: 19px;
-    color: green;
+    color: rgb(17, 208, 17);
+    border:3px solid white;
 }
 .not-done{
     font-size: 19px;
@@ -142,30 +143,29 @@ textarea{
     text-transform: uppercase;
     margin: 20px;
     font-weight: bold;
-    cursor:pointer;
+    cursor: url("./rocket.png"),auto;
     border: none;
     transition:all 0.5s ease-in-out;
 
   }
-
+  
 .btn:hover{
-
-  /* glow */
-/* background-color: aqua;                    
+  
+  cursor: url("./rocket.png"),auto;
+  /* glow  */
+ /* background-color: aqua;                    
 box-shadow: 0 0 5px yellow,
             0 0 25px yellow, 
             0 0 100px yellow        ; */
 
 
 /* shadowing */
-            box-shadow: 5px 5px 5px rgb(122, 18, 241);
+            /* box-shadow: -10px -10px 1px rgb(122, 18, 241); */
 
 
 /* transition */
 /* box-shadow: inset 120px 0 0 0 rgb(222, 29, 184),
           inset  -120px 0 0 0 rgb(26, 25, 26); */
-
-
 
 }
 

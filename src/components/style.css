@@ -326,12 +326,11 @@ button:focus {
  /* background-image: var(--image-gradient), url(./Assets/bg/home-bg.jpg);*/
   background-position: top center;
   background-repeat:no-repeat;
-  padding-bottom: 30px !important;
+ 
   padding-top: 30px !important;
 }
 
 .home-content {
-  padding: 9rem 0 2rem !important;
   color: whitesmoke;
   text-align: left;
 }
@@ -386,18 +385,17 @@ button:focus {
 .home-about-section {
   position: relative;
   padding-bottom: 70px !important;
-  padding-top: 70px !important;
 }
 
 .home-about-description {
   color: white !important;
-  padding-top: 100px !important;
-  padding-bottom: 20px !important;
+  
+  
   text-align: center;
 }
 
 .home-about-body {
-  padding-top: 50px;
+  
   font-size: 1.2em !important;
   text-align: left;
 }

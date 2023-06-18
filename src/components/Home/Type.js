@@ -11,10 +11,12 @@ function Type() {
           "React learner",
           "Code enthusiast",
           "Open Source Contributor",
+          "Open To Work",
         ],
         autoStart: true,
         loop: true,
-        deleteSpeed: 5,
+        deleteSpeed: 8,
+        
       }}
     />
   );

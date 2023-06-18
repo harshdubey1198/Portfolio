@@ -5,7 +5,6 @@ import './Contact.css';
 // import '../style.css';
 import axios from "axios";
  import Particle from "../Particle"
-// import Footer from '../Footer';
 
 const Contact = () => {
     const form = useRef();
@@ -57,22 +56,26 @@ const Contact = () => {
                     <h1 className="yellow">Contact me</h1>
                 </Col>
                 <Col md={6} className="c-right">
-                    <form ref={form} onSubmit={sendEmail}>
+                    <form ref={form} onSubmit={sendEmail} style={{paddingBottom:"90px"}}>
+                        
                         <input type="text" name="name" className="user"  placeholder="Name" onChange={handleChange} value={formData.name || ""}/>
                         <input type="email" name="email" className="user" placeholder="Email" onChange={handleChange} value={formData.email || ""}/>
-                        <input type="tel" name="mobile" className="user" placeholder='Mobile' onChange={handleChange} value={formData.mobile || ""}/> 
+                        <input type="tel" name="mobile" className="user" placeholder="Mobile" onChange={handleChange} value={formData.mobile || ""}/> 
                         <textarea name="message" className="user" placeholder="Message" onChange={handleChange} value={formData.message || ""}/>
                         <input type="file" name="resume" className="user" onChange={handleChange}/>
                         <span className='not-done'>{notDone && "Please, fill all the input field"}</span>
 
 
 
-                        <Button  type="submit" className="btn" disabled={done} style={{ maxWidth: "250px"  }}>Send</Button>
-                        <span className='done' >{done && "Thanks for contacting me. "}</span>
+                        <Button  type="submit" className="btn-10" enabled={done} >Send</Button>
+
+
+                        <span className='done' >{done && " Thanks for contacting me. "}</span>
                     </form>
                 </Col>
             </Row>
         </Container>
+       
     );
 };
 

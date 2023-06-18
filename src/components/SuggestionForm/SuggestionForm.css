@@ -8,6 +8,12 @@ border-radius: 10px;
   align-items: center;
   justify-content: center;
   margin-top: 150px; /* Adjust this value as needed */
+ 
+  border: 2px solid #40008a;
+  border-radius: 8px;
+  font-size: 19px;
+  color: white   
+
 }
 
 .suggestion-form h2 {
@@ -23,7 +29,10 @@ border-radius: 10px;
   margin-bottom: 1rem;
   color: white;
   font-weight: bolder;
+  
 }
+/* .suggestion-form .form-group:hover {    box-shadow: 0 0 9px #7500fa;
+} */
 
 .suggestion-form label {
   display: block;
@@ -51,7 +60,10 @@ border-radius: 10px;
 }
 
 .suggestion-form button:hover {
-  background-color: #45a049;
+  background-color: #000000;
+  cursor: url("./arrow.png"),auto;
+  color:white;
+  background-color:rgb(178, 15, 178);
 }
 
 @keyframes glowing-border {
