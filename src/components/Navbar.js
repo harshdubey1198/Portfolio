@@ -7,6 +7,9 @@ import Container from "react-bootstrap/Container";
 import logo from "../Assets/logo1198.png";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
+import './navbar.css';
+
+
 // import { CgGitFork } from "react-icons/cg";
 // import {GoLogoGithub} from "react-icons/go"
 import {IoLogoGithub} from "react-icons/io"

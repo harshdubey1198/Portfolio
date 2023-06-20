@@ -2,7 +2,7 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import { AiOutlineBook } from 'react-icons/ai';
 import './Education.css';
-import Particle from '../Particle';
+import Particle from '../Particle4';
 import image1 from "./global.png";
 import image2 from "./bff.jpg";
 
