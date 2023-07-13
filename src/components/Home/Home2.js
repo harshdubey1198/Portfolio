@@ -78,6 +78,8 @@ function Home2() {
                 >
                   <AiFillGithub />
                 </a>
+                <h6 style={{color:"white"}}>Github</h6>
+
               </li>
               <li className="social-icons">
                 <a
@@ -85,9 +87,10 @@ function Home2() {
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
-                >
-                  <AiOutlineTwitter />
+                > <AiOutlineTwitter />
                 </a>
+               <h6 style={{color:"white"}}>Twitter</h6>
+
               </li>
               <li className="social-icons">
                 <a
@@ -98,6 +101,7 @@ function Home2() {
                 >
                   <FaLinkedinIn />
                 </a>
+                <h6 style={{color:"white"}}>LinkedIn</h6>
               </li>
               <li className="social-icons">
                 <a
@@ -108,6 +112,8 @@ function Home2() {
                 >
                   <AiFillInstagram />
                 </a>
+                <h6 style={{color:"white"}}>Instagram</h6>
+
               </li>
               <li className="social-icons">
                 <a
@@ -118,6 +124,7 @@ function Home2() {
                 >
                   <FaWhatsapp />
                 </a>
+                <h6 style={{color:"white"}}>Whatsapp</h6> 
               </li>
             </ul>
           </Col>
