@@ -1,3 +1,4 @@
+//this is the footer of the portfolio.
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import {
