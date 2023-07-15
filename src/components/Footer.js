@@ -1,12 +1,7 @@
 //this is the footer of the portfolio.
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import {
-  AiFillGithub,
-  AiOutlineTwitter,
-  AiFillInstagram,
-  AiFillMail,
-} from "react-icons/ai";
+import {AiFillGithub,AiOutlineTwitter,AiFillInstagram,AiFillMail} from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import "./Footer.css";
 
