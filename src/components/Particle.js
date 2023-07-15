@@ -8,7 +8,7 @@ function Particle() {
       params={{
         "particles": {
           "number": {
-            "value": 50,
+            "value": 100,
             "density": {
               "enable": true,
               "value_area": 800
@@ -18,7 +18,7 @@ function Particle() {
             "value": "#ffffff"
           },
           "shape": {
-            "type": "polygon",
+            "type": "star",
             "stroke": {
               "width": 0,
               "color": "#000000"
@@ -28,7 +28,7 @@ function Particle() {
             },
             
             "image": {
-              "src": "",
+              "src": "./arrow.png",
               "width": 0,
               "height": 0
             }

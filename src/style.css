@@ -779,3 +779,9 @@ body {
 }
 
 
+.blockquote-footer1{
+  color: #a588c0 !important;
+}
+.blockquote-footer1:hover{
+  cursor:url("./components/arrow.png"),auto;
+}

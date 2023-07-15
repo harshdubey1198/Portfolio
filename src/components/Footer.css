@@ -37,4 +37,5 @@
   
   .blockquote-footer {
     color: #a588c0 !important;
+    cursor:url("./arrow.png"),auto;
   }
