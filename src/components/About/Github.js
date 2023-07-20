@@ -1,5 +1,5 @@
 
-//code for fetching data from github using githubcalendar ..
+//code for fetching data from github using githubcalendar .. goal
 import React from "react";
 import GitHubCalendar from "react-github-calendar";
 import { Row } from "react-bootstrap";
