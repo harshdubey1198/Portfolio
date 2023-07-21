@@ -42,7 +42,7 @@ const Resume = () => {
             variant="primary"
             href={pdf}
             target="_blank"
-            style={{ maxWidth: "250px" }}
+            style={{ maxWidth: "250px",marginBottom:"100px" }}
           >
             <AiOutlineDownload />
                Download Resume
