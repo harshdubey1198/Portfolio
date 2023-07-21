@@ -1,0 +1,47 @@
+/* Resume Page Styles */
+.resume-section {
+   
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .resume h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .resume h6 {
+    font-size: 18px;
+    color: #777;
+  }
+  
+  .resume .resume-pdf {
+    max-width: 100%;
+  }
+  
+  .resume .download-button {
+    margin-top: 20px;
+  }
+  
+  /* Download Button Styles */
+  .btn-download-resume {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-download-resume:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-download-resume .download-icon {
+    margin-right: 8px;
+    position: relative;
+    top: 2px;
+  }
+  
