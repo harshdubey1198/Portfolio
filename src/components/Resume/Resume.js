@@ -4,7 +4,7 @@ import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import { AiOutlineDownload } from "react-icons/ai";
 
-// import Particle from '../Particle3';
+import Particle from '../Particle2';
 import pdf from "../Harsh_it_29.pdf";
 import "./resume.css";
 import { Document, Page, pdfjs } from "react-pdf";
@@ -30,7 +30,18 @@ const Resume = () => {
        <Row style={{color:"white"}}>
         <h1>RESUME </h1><h6>PREVIEW</h6>
        </Row>
+       <Row style={{ justifyContent: "center", position: "relative" }}>
+        <Button
+  variant="primary"
+  href={pdf}
+  target="_blank"
+  style={{ maxWidth: "250px", marginBottom: "100px" }}
+>
+  <AiOutlineDownload />
+  Download Resume
+</Button>
 
+        </Row>
         <Row className="resume">
           <Document file={resumeLink} className="d-flex justify-content-center">
             <Page pageNumber={1} scale={width > 786 ? 1.0 : 0.6} />
@@ -49,6 +60,7 @@ const Resume = () => {
 </Button>
 
         </Row>
+        <Particle/>
       </Container>
     </div>
   )

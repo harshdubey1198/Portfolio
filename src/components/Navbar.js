@@ -154,7 +154,7 @@ function NavBar() {
                 target="_blank"
                 className="fork-btn-inner"
               >
-                <IoLogoGithub style={{ fontSize: "1em" }} />{" "}
+                <IoLogoGithub style={{ fontSize: "1em" }} />Github
                 <AiFillStar style={{ fontSize: "1em" }} />
               </Button>
             </Nav.Item>
