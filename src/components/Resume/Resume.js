@@ -4,7 +4,7 @@ import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import { AiOutlineDownload } from "react-icons/ai";
 
-// import Particle from '../Particle2';
+ import Particle from '../Particle4';
 import pdf from "../Harsh_it_29.pdf";
 import "./resume.css";
 import { Document, Page, pdfjs } from "react-pdf";
@@ -24,7 +24,8 @@ const Resume = () => {
   }, []);
 
   return (
-    <div>
+    <div>      <Particle/>
+
       <Container fluid className="resume-section" style={{paddingTop:"131px"}}>
         
        <Row style={{color:"white"}}>
