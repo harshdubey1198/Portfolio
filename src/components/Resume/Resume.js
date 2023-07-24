@@ -68,4 +68,4 @@ const Resume = () => {
 }
 
 export default Resume
-//make sure to edit url link
+//make sure to edit url link for resume
