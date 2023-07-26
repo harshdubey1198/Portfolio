@@ -1,5 +1,5 @@
 
-// made all possible things attached into the navbar
+// made all possible things attached into the navbar for making it useful
 import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
