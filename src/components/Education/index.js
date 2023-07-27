@@ -1,3 +1,4 @@
+//Education component for portfolio
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import { AiOutlineBook } from 'react-icons/ai';
