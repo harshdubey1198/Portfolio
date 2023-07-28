@@ -142,7 +142,7 @@
   }
   
   .navbar-nav .nav-item a::after {
-    content: "";
+    content: "";/*lol*/
     position: relative;
     display: block;
     height: 5px;
