@@ -7,6 +7,7 @@ import image2 from "./project2.jpg";
 import image3 from "./project3.jpg";
 import image4 from "./Project4.jpg";
 import image5 from "./project5.png";
+import image6 from "./Project6.png";
 
 function Projects() {
   const projects = [
@@ -43,6 +44,13 @@ function Projects() {
       imgPath: image5,
       ghLink: "https://github.com/harshdubey1198/upiexpress",
       demoLink: "https://upi-express.netlify.app/",
+    },
+    {
+      title: "Digital Clock",
+      description: " This is a digital clock which shows the current time and date. It is designed using Html, Css, Js in the ReactJs environment.",
+      imgPath: image6,//project image
+      ghLink: "https://github.com/harshdubey1198/digital-watch",
+      demoLink: "https://digi-clock-1198.netlify.app/",
     },
   ];
 
