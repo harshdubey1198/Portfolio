@@ -10,12 +10,11 @@ function Type() {
           "Cloud Engineer",
           "React learner",
           "Code enthusiast",
-          "Open Source Contributor",
           "Open To Work",
         ],
         autoStart: true,
         loop: true,
-        deleteSpeed: 8,
+        deleteSpeed: 9,
         
       }}
     />
