@@ -21,4 +21,4 @@ function Type() {
   );
 }
 
-export default Type;
+export default Type;//exporting typewriter effect
