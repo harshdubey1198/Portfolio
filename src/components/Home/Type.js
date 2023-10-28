@@ -17,11 +17,12 @@ function Type() {
           "Web Developer",
           "Full Stack Developer",
           "Software Engineer",
+          
         ],
         autoStart: true,
         loop: true,
         deleteSpeed: 9,
-        
+        // loopCount: 5,
       }}
     />
   );
