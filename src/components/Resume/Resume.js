@@ -5,7 +5,8 @@ import Button from "react-bootstrap/Button";
 import { AiOutlineDownload } from "react-icons/ai";
 
  import Particle from '../Particle4';
-import pdf from "../Harsh_it_29.pdf";
+import pdf from "./Harsh_it_29.pdf";
+import pdf2 from "./Harsh_IT_resume.pdf";
 import "./resume.css";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer";
@@ -39,7 +40,7 @@ const Resume = () => {
   style={{ maxWidth: "250px", marginBottom: "100px" }}
 >
   <AiOutlineDownload />
-  Download Resume
+  Download Resume template 1
 </Button>
 
         </Row>
@@ -52,12 +53,12 @@ const Resume = () => {
         <Row style={{ justifyContent: "center", position: "relative" }}>
         <Button
   variant="primary"
-  href={pdf}
+  href={pdf2}
   target="_blank"
   style={{ maxWidth: "250px", marginBottom: "100px" }}
 >
   <AiOutlineDownload />
-  Download Resume
+  Download Resume template 2
 </Button>
 
         </Row>
