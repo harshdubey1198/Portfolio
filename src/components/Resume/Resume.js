@@ -1,3 +1,4 @@
+//here in this page you can see the preview of resume and download button.
 import React, { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
@@ -23,7 +24,7 @@ const Resume = () => {
   return (
     <div>
       <Particle />
-      <Container fluid className="resume-section" style={{ paddingTop: "131px" }}>
+      <Container fluid className="resume-section" style={{ paddingTop: "81px" }}>
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
             variant="primary"
