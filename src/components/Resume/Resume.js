@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button";
 import { AiOutlineDownload } from "react-icons/ai";
 import Particle from '../Particle4';
 // import pdf from "./Harsh_it_29.pdf";
-import pdf2 from "./Harsh_IT_resume.pdf";
+import pdf2 from "./Harsh_IT_resume.pdf"; //component location of resume pdf 
 import "./resume.css";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer";
