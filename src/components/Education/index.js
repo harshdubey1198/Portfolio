@@ -46,7 +46,7 @@ function Education() {
           {educationData.map((data, index) => (
             <div className="education-card"  key={index}>
               <div className="education-logo" style={{paddingTop:"20px"}}  >
-                <img src={data.logo} alt="Education Logo" />
+                <img src={data.logo} style={{borderRadius:"20px"}} alt="Education Logo" />
               </div>
               <div className="education-details" style={{marginTop:"10px"}}>
                 <h3 style={{color:"floralwhite",fontWeight:"bolder"}}>{data.institution}</h3>
