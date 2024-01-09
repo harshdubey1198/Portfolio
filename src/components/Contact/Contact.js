@@ -35,7 +35,7 @@ const Contact = () => {
                 formDataToSend.append("mobile", formData.mobile);
                 formDataToSend.append("message", formData.message);
                 formDataToSend.append("resume", formData.resume);
-                await axios.post("https://getform.io/f/9cdbd3e7-8c0c-4941-84c4-42dbf1d63990", formDataToSend, {
+                await axios.post("http://localhost:5000/submit-form", formDataToSend, {
                     headers: {
                         "Content-Type": "multipart/form-data"
                     }
