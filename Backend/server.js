@@ -4,10 +4,11 @@ const multer = require('multer');
 const path = require('path');
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 10000;
 
-// Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/Portfolio', {
+// Connect to MongoDB Atlas
+const uri = "mongodb+srv://maharaaj:maharaaj@portfolio.exwn9uz.mongodb.net/?retryWrites=true&w=majority";
+mongoose.connect(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
