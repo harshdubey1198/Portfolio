@@ -1,10 +1,9 @@
-import React,{useState, useRef} from 'react';
+import React, { useState, useRef } from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 import './Contact.css';
-// import '../style.css';
 import axios from "axios";
- import Particle from "../Particle"
+import Particle from "../Particle";
 
 const Contact = () => {
     const form = useRef();
@@ -14,9 +13,9 @@ const Contact = () => {
 
     const handleChange = (e) => {
         if (e.target.name === "resume") {
-            setFormData({...formData, [e.target.name] : e.target.files[0]});
+            setFormData({ ...formData, [e.target.name]: e.target.files[0] });
         } else {
-            setFormData({...formData, [e.target.name] : e.target.value});
+            setFormData({ ...formData, [e.target.name]: e.target.value });
         }
         setDone(false);
         setNotDone(false);
@@ -35,11 +34,16 @@ const Contact = () => {
                 formDataToSend.append("mobile", formData.mobile);
                 formDataToSend.append("message", formData.message);
                 formDataToSend.append("resume", formData.resume);
-                await axios.post("http://localhost:10000/submit-form", formDataToSend, {
+
+                // Update the URL to your deployed backend
+                const backendURL = "https://portfolio-backend-5yis.onrender.com/submit-form";
+
+                await axios.post(backendURL, formDataToSend, {
                     headers: {
                         "Content-Type": "multipart/form-data"
                     }
                 });
+
                 setDone(true);
                 setFormData({});
             } catch (error) {
@@ -48,34 +52,31 @@ const Contact = () => {
         }
     };
 
-    return(
-        <Container style={{paddingTop: '200px',paddingBottom:'100px'}} ><Particle />
+    return (
+        <Container style={{ paddingTop: '200px', paddingBottom: '100px' }}><Particle />
             <Row>
-                <Col md={6} className="c-left" style={{paddingBottom:'10px'}}>
+                <Col md={6} className="c-left" style={{ paddingBottom: '10px' }}>
                     <h1>Get in Touch</h1>
                     <h1 className="yellow">Contact me</h1>
                 </Col>
                 <Col md={6} className="c-right">
-                    <form ref={form} onSubmit={sendEmail} style={{paddingBottom:"90px"}}>
-                        
-                        <input type="text" name="name" className="user"  placeholder="Name" onChange={handleChange} value={formData.name || ""}/>
-                        <input type="email" name="email" className="user" placeholder="Email" onChange={handleChange} value={formData.email || ""}/>
-                        <input type="tel" name="mobile" className="user" placeholder="Mobile" onChange={handleChange} value={formData.mobile || ""}/> 
-                        <textarea name="message" className="user" placeholder="Message" onChange={handleChange} value={formData.message || ""}/>
-                        <input type="file" name="resume" className="user" onChange={handleChange}/>
+                    <form ref={form} onSubmit={sendEmail} style={{ paddingBottom: "90px" }}>
+
+                        <input type="text" name="name" className="user" placeholder="Name" onChange={handleChange} value={formData.name || ""} />
+                        <input type="email" name="email" className="user" placeholder="Email" onChange={handleChange} value={formData.email || ""} />
+                        <input type="tel" name="mobile" className="user" placeholder="Mobile" onChange={handleChange} value={formData.mobile || ""} />
+                        <textarea name="message" className="user" placeholder="Message" onChange={handleChange} value={formData.message || ""} />
+                        <input type="file" name="resume" className="user" onChange={handleChange} />
                         <span className='not-done'>{notDone && "Please, fill all the input field"}</span>
 
+                        <Button type="submit" className="btn-10" enabled={done} >Send</Button>
 
-
-                        <Button  type="submit" className="btn-10" enabled={done} >Send</Button>
-
-
-                        <span className='done' >{done && " Thanks for contacting me. "}</span>
+                        <span className='done' style={{ backgroundColor: "black", borderRadius: "20px", padding: "14px" }} >{done && " Thanks for contacting me. "}</span>
                     </form>
                 </Col>
             </Row>
         </Container>
-       
+
     );
 };
 
