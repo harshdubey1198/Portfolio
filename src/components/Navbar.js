@@ -153,6 +153,7 @@ function NavBar() {
                 href="https://github.com/harshdubey1198/"
                 target="_blank"
                 className="fork-btn-inner"
+                fontSize="20px"
               >
                 <IoLogoGithub style={{ fontSize: "1em" }} />Github
                 <AiFillStar style={{ fontSize: "1em" }} />

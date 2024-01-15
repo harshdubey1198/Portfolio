@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import './Contact.css';
 import axios from "axios";
 import Particle from "../Particle";
-
+// useState useRef useEffect
 const Contact = () => {
     const form = useRef();
     const [done, setDone] = useState(false);
