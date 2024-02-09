@@ -12,11 +12,11 @@ const Contact = () => {
     const [formData, setFormData] = useState({});
 
     const handleChange = (e) => {
-        if (e.target.name === "resume") {
-            setFormData({ ...formData, [e.target.name]: e.target.files[0] });
-        } else {
-            setFormData({ ...formData, [e.target.name]: e.target.value });
-        }
+        const { name, value } = e.target;
+        setFormData(prevFormData => ({
+            ...prevFormData,
+            [name]: value
+        }));
         setDone(false);
         setNotDone(false);
     };
@@ -33,7 +33,7 @@ const Contact = () => {
                 formDataToSend.append("email", formData.email);
                 formDataToSend.append("mobile", formData.mobile);
                 formDataToSend.append("message", formData.message);
-                formDataToSend.append("resume", formData.resume);
+                
 
                 // Update the URL to your deployed backend
                 const backendURL = "https://portfolio-backend-5yis.onrender.com/submit-form";
@@ -66,7 +66,7 @@ const Contact = () => {
                         <input type="email" name="email" className="user" placeholder="Email" onChange={handleChange} value={formData.email || ""} />
                         <input type="tel" name="mobile" className="user" placeholder="Mobile" onChange={handleChange} value={formData.mobile || ""} />
                         <textarea name="message" className="user" placeholder="Message" onChange={handleChange} value={formData.message || ""} />
-                        <input type="file" name="resume" className="user" onChange={handleChange} />
+                       
                         <span className='not-done'>{notDone && "Please, fill all the input field"}</span>
 
                         <Button type="submit" className="btn-10" enabled={done} >Send</Button>

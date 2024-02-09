@@ -45,11 +45,22 @@
 
 input{
   padding-top: 10px;
-    background-color: var(--purple)
+    background-color: var(--purple);
+    caret-color: white;
+   }
+   input::placeholder {
+    color: #ffffff; 
 }
+
+
+
 textarea{
     height: 5rem!important;
     background-color: var(--purple)
+
+}
+textarea::placeholder {
+    color: #ffffff; 
 }
 
 .done{
