@@ -71,7 +71,7 @@ const Contact = () => {
 
                         <Button type="submit" className="btn-10" enabled={done} >Send</Button>
 
-                        <span className='done' style={{ backgroundColor: "black", borderRadius: "20px", padding: "14px" }} >{done && " Thanks for contacting me. "}</span>
+                        <span className='done' >{done && " Thanks for contacting me. "}</span>
                     </form>
                 </Col>
             </Row>
