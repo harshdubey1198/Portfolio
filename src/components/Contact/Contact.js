@@ -1,15 +1,22 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 import './Contact.css';
 import axios from "axios";
 import Particle from "../Particle";
-// useState useRef useEffect
+
 const Contact = () => {
     const form = useRef();
     const [done, setDone] = useState(false);
     const [notDone, setNotDone] = useState(false);
-    const [formData, setFormData] = useState({});
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        mobile: '',
+        message: '',
+        latitude: '',
+        longitude: ''
+    });
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -20,6 +27,26 @@ const Contact = () => {
         setDone(false);
         setNotDone(false);
     };
+
+    useEffect(() => {
+        if ("geolocation" in navigator) {
+            navigator.geolocation.getCurrentPosition(
+                position => {
+                    const { latitude, longitude } = position.coords;
+                    setFormData(prevFormData => ({
+                        ...prevFormData,
+                        latitude,
+                        longitude
+                    }));
+                },
+                error => {
+                    console.error("Error getting user location:", error);
+                }
+            );
+        } else {
+            console.error("Geolocation is not supported by this browser.");
+        }
+    }, []);
 
     const sendEmail = async (e) => {
         e.preventDefault();
@@ -33,9 +60,9 @@ const Contact = () => {
                 formDataToSend.append("email", formData.email);
                 formDataToSend.append("mobile", formData.mobile);
                 formDataToSend.append("message", formData.message);
-                
+                formDataToSend.append("latitude", formData.latitude);
+                formDataToSend.append("longitude", formData.longitude);
 
-                // Update the URL to your deployed backend
                 const backendURL = "https://portfolio-backend-5yis.onrender.com/submit-form";
 
                 await axios.post(backendURL, formDataToSend, {
@@ -45,7 +72,14 @@ const Contact = () => {
                 });
 
                 setDone(true);
-                setFormData({});
+                setFormData({
+                    name: '',
+                    email: '',
+                    mobile: '',
+                    message: '',
+                    latitude: '',
+                    longitude: ''
+                });
             } catch (error) {
                 console.log(error);
             }
@@ -53,7 +87,8 @@ const Contact = () => {
     };
 
     return (
-        <Container style={{ paddingTop: '200px', paddingBottom: '100px' }}><Particle />
+        <Container style={{ paddingTop: '200px', paddingBottom: '100px' }}>
+            <Particle />
             <Row>
                 <Col md={6} className="c-left" style={{ paddingBottom: '10px' }}>
                     <h1>Get in Touch</h1>
@@ -62,21 +97,20 @@ const Contact = () => {
                 <Col md={6} className="c-right">
                     <form ref={form} onSubmit={sendEmail} style={{ paddingBottom: "90px" }}>
 
-                        <input type="text" name="name" className="user" placeholder="Name" onChange={handleChange} value={formData.name || ""} />
-                        <input type="email" name="email" className="user" placeholder="Email" onChange={handleChange} value={formData.email || ""} />
-                        <input type="tel" name="mobile" className="user" placeholder="Mobile" onChange={handleChange} value={formData.mobile || ""} />
-                        <textarea name="message" className="user" placeholder="Message" onChange={handleChange} value={formData.message || ""} />
-                       
+                        <input type="text" name="name" className="user" placeholder="Name" onChange={handleChange} value={formData.name} />
+                        <input type="email" name="email" className="user" placeholder="Email" onChange={handleChange} value={formData.email} />
+                        <input type="tel" name="mobile" className="user" placeholder="Mobile" onChange={handleChange} value={formData.mobile} />
+                        <textarea name="message" className="user" placeholder="Message" onChange={handleChange} value={formData.message} />
+
                         <span className='not-done'>{notDone && "Please, fill all the input field"}</span>
 
-                        <Button type="submit" className="btn-10" enabled={done} >Send</Button>
+                        <Button type="submit" className="btn-10" enabled={done}>Send</Button>
 
-                        <span className='done' >{done && " Thanks for contacting me. "}</span>
+                        <span className='done'>{done && " Thanks for contacting me. "}</span>
                     </form>
                 </Col>
             </Row>
         </Container>
-
     );
 };
 
