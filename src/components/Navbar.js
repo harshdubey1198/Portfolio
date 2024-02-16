@@ -1,5 +1,3 @@
-
-// made all possible things attached into the navbar for making it useful
 import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
@@ -8,28 +6,9 @@ import logo from "../Assets/logo1198.png";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import './navbar.css';
-
-
-// import { CgGitFork } from "react-icons/cg";
-// import {GoLogoGithub} from "react-icons/go"
 import {IoLogoGithub} from "react-icons/io"
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-//import { faBook } from '@fortawesome/free-solid-svg-icons'
-
 import {FcContacts,FcManager,FcHome,FcDocument, FcReading,FcViewDetails} from "react-icons/fc"
-import {
-  AiFillStar,
-  
-  
-  // AiOutlineUser,
-  // AiOutlineBook,
-  
-  //AiOutlineMenu,
-  // AiOutlineContacts,
- // AiOutlinePhone
-} from "react-icons/ai";
-// import { GiSkills } from "react-icons/gi"
-// import { CgFileDocument } from "react-icons/cg";
+import {AiFillStar} from "react-icons/ai";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
