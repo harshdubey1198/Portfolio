@@ -90,7 +90,7 @@ function Projects() {
     {
       title: "Digital Clock",
       description: " This is a digital clock which shows the current time and date. It is designed using Html, Css, Js in the ReactJs environment.",
-      imgPath: image11,//project image
+      imgPath: image11,
       ghLink: "https://github.com/harshdubey1198/digital-watch",
       demoLink: "https://digi-clock-1198.netlify.app/",
     },
@@ -103,7 +103,7 @@ function Projects() {
       <Particle />
       <Container>
         <div style={{ position: "relative", textAlign: "center" }}>
-          <div
+          <div className="project-total"
             style={{
               position: "absolute",
               top: "0px",
@@ -119,7 +119,7 @@ function Projects() {
               zIndex: 999, 
             }}
           >
-            Total Projects : {totalProjects}
+            <span>Total Projects : </span>{totalProjects}
           </div>
         </div>
 
