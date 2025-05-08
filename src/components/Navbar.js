@@ -34,7 +34,7 @@ function NavBar() {
     >
       <Container>
         <Navbar.Brand href="/" className="d-flex">
-          <img src={logo} className="img-fluid navbar-brand logo" alt="brand"  />
+          <img src={logo} className="img-fluid navbar-brand logo" alt="brand" style={{maxHeight:"33px" ,marginBottom:"15px"}} />
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
@@ -46,7 +46,7 @@ function NavBar() {
           <span></span>
           <span></span>
         </Navbar.Toggle>
-        <Navbar.Collapse id="responsive-navbar-nav">
+        <Navbar.Collapse id="responsive-navbar-nav" className="d-flex align-items-center">
           <Nav className="ms-auto" defaultActiveKey="#home">
           
             <Nav.Item>
@@ -133,7 +133,8 @@ function NavBar() {
                 href="https://github.com/harshdubey1198/"
                 target="_blank"
                 className="fork-btn-inner"
-                fontSize="20px"
+                fontSize="16px"
+                style={{marginTop:"5px"}}
               >
                 <IoLogoGithub style={{ fontSize: "1em" }} />Github
                 <AiFillStar style={{ fontSize: "1em" }} />

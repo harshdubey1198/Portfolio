@@ -14,9 +14,16 @@ import image8 from "./project3.jpg";
 import image9 from "./Project4.jpg";
 import image10 from "./project5.png";
 import image11 from "./Project6.png";
-
+import aaMOBee from "./Images/aaMOBee.png";
 function Projects() {
   const projects = [
+    {
+      title: "aaMOBee",
+      description: "aaMOBee is a scalable B2B2C platform offering invoice, inventory, and employee management for traders with role-based access, security, future enhancements, and tailored workflows for admins and employees.",
+      imgPath: aaMOBee,
+      // ghLink: "https://github.com/harshdubey1198/aamobee",
+      demoLink: "https://aamobee.com/",
+    },
     {
       title: "Portfolio",
       description: "Portfolio designed for showcasing my information, skills of web development using React.js. This Web app is developed in combination of Html, Css, Js.",
@@ -137,7 +144,7 @@ function Projects() {
                 isBlog={false}
                 title={project.title}
                 description={project.description}
-                ghLink={project.ghLink}
+                ghLink={project.ghLink }
                 demoLink={project.demoLink}
               />
             </Col>
