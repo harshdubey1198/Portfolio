@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button";
 import { AiOutlineDownload } from "react-icons/ai";
 import Particle from '../Particle4';
 // import pdf from "./Harsh_it_29.pdf";
-import pdf2 from "./Harsh-resume.pdf"; //component location of resume pdf 
+import pdf2 from "./Harsh_resume-SDE.pdf"; //component location of resume pdf 
 import "./resume.css";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer";
@@ -14,6 +14,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pd
 
 const Resume = () => {
   const [width, setWidth] = useState(1200);
+  const [numPages, setNumPages] = useState(null);
 
   useEffect(() => {
     setWidth(window.innerWidth);
@@ -36,8 +37,20 @@ const Resume = () => {
           </Button>
         </Row>
         <Row className="resume">
-          <Document file={pdf2} className="d-flex justify-content-center">
-            <Page pageNumber={1} scale={isMobile ? 0.5 : 1.0} />
+        <Document
+          file={pdf2}
+          className="d-flex flex-column align-items-center"
+          onLoadSuccess={({ numPages }) => setNumPages(numPages)}
+        >
+        {Array.from(new Array(numPages), (el, index) => (
+          <Page
+            key={`page_${index + 1}`}
+            pageNumber={index + 1}
+            scale={isMobile ? 0.5 : 1.0}
+            renderTextLayer={false}
+            renderAnnotationLayer={false}
+          />
+        ))}
           </Document>
         </Row>
       </Container>

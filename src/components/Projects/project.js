@@ -15,8 +15,17 @@ import image9 from "./Project4.jpg";
 import image10 from "./project5.png";
 import image11 from "./Project6.png";
 import aaMOBee from "./Images/aaMOBee.png";
+import artdomainx from "./Images/artdomainx.png"
 function Projects() {
   const projects = [
+   {
+      title: "ArtDomainX",
+      description: "ArtDomainX is a global artist community platform inspired by social networks, enabling artists to share artworks, create events, join guilds, and collaborate across countries. Built with React, Tailwind, Python, and SQL for scalable and interactive features.",
+      imgPath: artdomainx,
+      // ghLink: "https://github.com/harshdubey1198/artdomainx",
+      demoLink: "https://artdomainx.com/",
+    },
+
     {
       title: "aaMOBee",
       description: "aaMOBee is a scalable B2B2C platform offering invoice, inventory, and employee management for traders with role-based access, security, future enhancements, and tailored workflows for admins and employees.",
