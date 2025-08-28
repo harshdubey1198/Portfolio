@@ -9,12 +9,7 @@ import Contact from "./components/Contact/Contact";
 import Resume from "./components/Resume/Resume";
 import Project from "./components/Projects/project";
 // import SuggestionForm from "./components/SuggestionForm/suggestionForm";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Navigate
-} from "react-router-dom";//hi 
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";//hi 
 import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./App.css";
@@ -39,7 +34,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/education" element={<Education />} />
+          <Route path="/journey" element={<Education />} />
           <Route path="/project" element={<Project />}/> 
           <Route path="/resume" element={<Resume />} />
           <Route path="/contact" element={<Contact/>}/>
